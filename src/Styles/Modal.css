@@ -1,0 +1,171 @@
+.modal{
+    position: absolute;
+    z-index: 20;
+    height: 100vh;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: rgba(31, 31, 31, 0.7);
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: .5s all ease-in;
+}
+.modal div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 70px;
+    background: linear-gradient( to right, #30304b, #3b3b55);
+    align-items: center;
+    height: 150px;
+    border-radius: 5px;
+    width: 400px;
+}
+.modal div p{
+    font-size: 15px;
+}
+.modal div h2{
+    /* background-color: rgb(10, 8, 8); */
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    height: 50px;
+    position: absolute;
+    display: grid;
+    color: white;
+    place-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.modal div form{
+    width: 85%;
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 5px; 
+    background-color: red;
+    position: relative;
+}
+.Inp{
+    background: linear-gradient( to right, #30304b, #3b3b58);
+    color: #338ee4;
+    padding-left: 20px;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.Label{
+    transition: .3s all ease-in;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    pointer-events: none;
+    /* background: linear-gradient( to right, #20202c, #3b3b58); */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px rgb(172, 172, 172) solid;
+}
+.conText{
+    transition: .3s all ease-in;
+    font-size: 15px;
+    position: absolute;
+    color: grey;
+    top: 6px;
+    left: 20px;
+}
+/* .Label::after{
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 4px;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px blue solid;
+} */
+.Inp:focus + .Label .conText, .Inp:valid + .Label .conText{
+    color:  #338ee4;
+    font-size: 12px;
+    background: linear-gradient( to right, #30304b, #30304b);
+    top: -11px;
+    padding: 3px;
+}
+.Inp:focus + .Label, .Inp:valid + .Label{
+    border: 2px  #338ee4 solid;
+}
+#Form{
+    height: 50px;
+    background-color: red;
+}
+.modal div a{
+    align-self: flex-end;
+    margin-right: 5%;
+    margin-top: 7px;
+}
+.Senbtn{
+    height: 30px;
+    width: 55px;
+    color: #338ee4;
+    background-color: transparent;
+    border: 1px #338ee4 solid;
+    outline: none;
+    margin-left: 10px;
+    transition: .2s all ease-out;
+    border-radius: 4px;
+}
+.Senbtn:hover{
+    color: white;
+    background-color: #021c70;
+}
+#Inp{
+    font-size: 10px;
+}
+#conText{
+    font-size: 12px;
+}
+.modal:target{
+    visibility: visible;
+    opacity: 1;
+}
+.modal div p{
+    color: wheat;
+    font-size: 14px;
+}
+/* .info0{
+    color: red;
+    background-color: #338ee4;
+    height: 10px;
+    width: 100px;
+} */
+@media(max-width: 600px) {
+    .modal div{
+        width: 85%;
+        height: 150px;
+    }
+    .modal div form{
+        width: 90%;
+    }
+    .modal div h2{
+        margin-left: 5%;
+        font-size: 20px;
+    }
+    .conText{
+        font-size: 13px;
+    }
+    .modal div p{
+        font-size: 11px;
+    }
+    .modal div h2{
+        left: -5%;
+    }
+}

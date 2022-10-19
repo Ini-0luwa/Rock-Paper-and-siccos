@@ -1,0 +1,305 @@
+#Bbody{
+    background-color: #192243;
+        width: 100%;
+        height: 100vh;
+        overflow-y: hidden;
+        overflow-x: hidden;
+}
+.img{
+    display: grid;
+    place-items: center;
+}
+.Bbody1{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    /* background-color: red; */
+}
+.profileBar{
+    box-shadow: black 0 0 5px;
+    height: 90px;
+    border: 2px rgb(151, 148, 148) solid;
+    width: 650px;
+    border-radius: 7px 30px 7px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nameTag{
+    height: 80%;
+    width: 120px;
+    box-shadow: black 0 0 7px;
+    background: linear-gradient(to right, #021c70, #373797, #081549);
+    /* background-color: green; */
+    border-radius: 7px 30px 7px 30px;
+    color: white;
+}
+.scoreTag{
+    height: 60%;
+    width: 90px;
+    /* background-color: green; */
+    color: white;
+    box-shadow: black 0 0 7px;
+    background: linear-gradient(to right, #021c70, #373797, #081549);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nameTag{
+    display: grid;
+    place-items: center;
+}
+.nameTag div{
+    height: 35px;
+    border: 1px solid white;
+    width: 35px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+.gameBar{
+    position: relative;
+    height: 350px;
+    /* border: 2px white solid; */
+    width: 400px;
+    /* background-color: green; */
+    transition: 0.9s all ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.tools{
+    /* z-index: 9; */
+    /* overflow: hidden; */
+    /* z-index: 1; */
+    height: 160px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+    position: relative;
+}
+.mainTools{
+    height: 140px;
+    border-radius: 50%;
+    width: 140px;
+    /* background-color: red; */
+    box-shadow: 0 0 10px;
+    position: relative;
+    z-index: 2;
+    /* overflow: hidden; */
+}
+.tools::after{
+    content: "";
+    box-shadow: 0 0 4px;
+    position: absolute;
+    top: 45%;
+    background-color: #373797;
+    z-index: 1;
+    width: 120px;
+    height: 15px;
+}
+.linn{
+    /* content: ""; */
+    box-shadow: 0 0 4px;
+    position: absolute;
+    top: 55%;
+    background-color: #373797;
+    /* z-index: ;  */
+    left: 22%;
+    width: 120px;
+    height: 15px;
+    transform: rotate(60deg);
+}
+#linn{
+    left: 50%;
+    transform: rotate(-60deg);
+    /* z-index: -9; */
+    /* background-color: red; */
+}
+.comentry{
+    height: 300px;
+    /* border: solid 1px #373797; */
+    width: 250px;
+    position: absolute;
+    top: 25vh;
+    left: 3%;
+    /* z-index: -1; */
+    /* position: relative; */
+}
+.message{
+    position: absolute;
+    width: 190px;
+    top: -5%;
+    /* z-index: 10; */
+    left: 23%;
+    border-radius: 7px;
+    background-color: #021c70;
+    height: 60px;
+    padding: 10px;
+    z-index: 20;
+    color: white;
+    transition: 0.9s all ease-in-out;
+}
+.message::after{
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #021c70;
+    top: -7px;
+    z-index: -1;
+    transform: rotate(45deg);
+    left: 8%;
+    /* padding: 10px 10px 10px 10px; */
+    /* padding-left: 10px; */
+}
+.gamee{
+    height: 240px;
+    width: 450px;
+    border: 1px solid rgb(69, 37, 250);
+    transition: 0.9s all ease-in-out;
+    border-radius: 8px 50px 8px 50px;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 0 0 8px;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+.handd{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 7px solid #021c70;
+    /* background-color: #081130; */
+    background: linear-gradient(to right, #081130, #091b5e, #081130);
+    color: white;
+    transition: 0.9s all ease-in-out;
+    display: grid;
+    place-items: center;
+    animation:  1s linear infinite;
+}
+.none{
+    transition: 0.9s all ease-in-out;
+    opacity: 0;
+}
+.nonee{
+    transform: translateX(-100%);
+    transition: 0.9s all ease-in-out;
+    opacity: 0;
+}
+@keyframes shake {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-90px);
+    }
+    100%{
+        transform: translateY(-90);
+    }
+}
+#rules{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    display: block;
+    opacity: 1;
+}
+.imgDiv{
+    position: absolute;
+    top: -110px;
+    /* left: -20px; */
+    box-shadow: 0 0 15px;
+    border-radius: 50%;
+}
+@media(max-width: 600px){
+    #rules{
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        display: block;
+        opacity: 1;
+    }
+    .handd{
+        height: 70px;
+        width: 70px;
+    }
+    .Bbody1{
+        transform: rotate(90deg);
+        width: 100%;
+        height: 100%;
+        gap: 10px;
+        /* justify-content: space-around; */
+    }
+    .gameBar{
+        width: 280px;
+        height: 230px;
+    }
+    .profileBar{
+        width: 450px;
+        height: 70px;
+    }
+    .nameTag{
+        height: 73%;
+    }
+    .nameTag div{
+        height: 27px;
+        width: 27px;
+    }
+    .imgDiv{
+        height: 80px;
+        width: 70px;
+        top: 0;
+    }
+    .tools{
+        height: 100px;
+        width: 100%;
+    }
+    .mainTools{
+        height: 100px;
+        width: 100px;
+    }
+    .tools::after{
+        width: 50px;
+    }
+    .gamee{
+        height: 160px;
+        width: 290px;
+    }
+    .comentry{
+        height: 150px;
+        /* top: 0; */
+        /* bottom: 0; */
+        /* right: 0; */
+        left: -28%;
+        width: 120px;
+        top: 36vh;
+        z-index: -1;
+        /* position: fixed; */
+    }
+    .message{
+        width: 100px;
+        z-index: 10;
+        height: 55px;
+        font-size: 12px;
+        top: 45px;
+    }
+}
+@media(max-width: 330px){
+    .comentry{
+        top: 43%;
+        left: -40%;
+    }
+}
